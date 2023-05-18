@@ -1,7 +1,7 @@
 # EventMaster
 Works with events in discord
 
-Bot can:
+Bot can do:
   1. Create an event according to the specified parameters(name, description, channel, image, date, time)
   2. Edit event according to specified parameters(id_event, name, description, image, date, time)
   3. View event information(id_event)
