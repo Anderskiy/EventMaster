@@ -65,22 +65,6 @@ class CreateEvets(commands.Cog):
         self.bot = bot
         self.timezones = {}
 
-    @commands.slash_command(name="set_channel_public", description="Установить публичный канал")
-    async def set_public_channel(
-            self, inter: disnake.GuildCommandInteraction, channel: disnake.TextChannel
-    ) -> None:
-        global channel_id_metion
-        channel_id_metion = channel.id
-        await inter.response.send_message(f"Установлен публичный канал: <#{channel_id_metion}>")
-
-    @commands.slash_command(name="set_role_ping", description="Установить пингуемую роль")
-    async def role_ping_set(
-            self, inter: disnake.GuildCommandInteraction, role: disnake.Role
-    ) -> None:
-        global role_ping_id
-        role_ping_id = role.id
-        await inter.response.send_message(f"Установлен публичный канал: {role.name}")
-
     @commands.slash_command(name="event_end", description="Заканчивает ивент")
     async def end_event(
             self, inter: disnake.GuildCommandInteraction, id: commands.LargeInt
